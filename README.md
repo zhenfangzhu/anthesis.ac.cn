@@ -1,11 +1,11 @@
-# Anthesis
+# Anthesis · anthesis.ac.cn
 
 **当我们与人工智能共同成长，我们会成为什么？**  
 **As we grow alongside AI, what will we become?**
 
-我是朱振方（Zhenfang Zhu），Anthesis 是我的个人研究网站。我关注 AI Agent、人的自主权，以及人与 AI 在长期交互中的共同成长。
+我是朱振方（Zhenfang Zhu），本科毕业于中国科学技术大学，Redding AI 联合创始人。[Anthesis（anthesis.ac.cn）](https://anthesis.ac.cn/) 是我的个人研究网站。我关注 AI Agent、人的自主权，以及人与 AI 在长期交互中的共同成长。
 
-[访问网站](https://anthesis.ac.cn/) · [English](https://anthesis.ac.cn/en/) · [关于我](https://anthesis.ac.cn/about.html)
+[访问 anthesis.ac.cn](https://anthesis.ac.cn/) · [English](https://anthesis.ac.cn/en/) · [关于我](https://anthesis.ac.cn/about.html)
 
 ## 内容与方向
 
@@ -17,7 +17,7 @@
 
 ## English
 
-I am **Zhenfang Zhu (朱振方)**, a graduate of the University of Science and Technology of China and a co-founder of Redding AI. Anthesis is my personal research website. I study AI agents, human agency, and how people and AI grow together over time.
+I am **Zhenfang Zhu (朱振方)**, a co-founder of Redding AI. I earned my bachelor’s degree from the University of Science and Technology of China (USTC). [Anthesis (anthesis.ac.cn)](https://anthesis.ac.cn/) is my personal research website. I study AI agents, human agency, and how people and AI grow together over time.
 
 I share my research notes, literature summaries, and research directions here. On the model evaluation page, I currently summarize published work; I have not yet released independent evaluations or rankings. I maintain the website source and page content in this repository.
 
