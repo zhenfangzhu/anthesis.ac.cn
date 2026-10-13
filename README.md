@@ -3,23 +3,23 @@
 **当我们与人工智能共同成长，我们会成为什么？**  
 **As we grow alongside AI, what will we become?**
 
-Anthesis 是朱振方（Zhenfang Zhu）的个人研究网站，关注 AI Agent、人的自主权，以及人与 AI 在长期交互中的共同成长。
+我是朱振方（Zhenfang Zhu），Anthesis 是我的个人研究网站。我关注 AI Agent、人的自主权，以及人与 AI 在长期交互中的共同成长。
 
-[访问网站](https://anthesis.ac.cn/) · [English](https://anthesis.ac.cn/en/) · [关于作者](https://anthesis.ac.cn/about.html)
+[访问网站](https://anthesis.ac.cn/) · [English](https://anthesis.ac.cn/en/) · [关于我](https://anthesis.ac.cn/about.html)
 
 ## 内容与方向
 
-- **研究笔记**：记录研究问题、阅读与思考，从[为什么是 Anthesis](https://anthesis.ac.cn/why-anthesis.html)开始。
-- **模型与评测**：整理关于模型行为、诚实、学习与自主权的公开研究。当前内容为文献整理，Anthesis 独立测评与排名尚未发布。
-- **研究方向**：长期交互的 Agent、基础模型与训练方法，以及评测与对照实验。
+- **研究笔记**：我在这里记录研究问题、阅读与思考，从[为什么是 Anthesis](https://anthesis.ac.cn/why-anthesis.html)开始。
+- **模型与评测**：我整理关于模型行为、诚实、学习与自主权的公开研究。目前我还没有发布独立测评与排名。
+- **研究方向**：我希望围绕长期交互的 Agent、基础模型与训练方法，以及评测与对照实验展开研究。
 
-本仓库保存网站源码与页面内容。研究阅读入口位于[研究笔记](https://anthesis.ac.cn/notes.html)和[模型与评测](https://anthesis.ac.cn/models.html)。
+我在本仓库维护网站源码与页面内容。你可以从[研究笔记](https://anthesis.ac.cn/notes.html)和[模型与评测](https://anthesis.ac.cn/models.html)开始阅读。
 
 ## English
 
-Anthesis is the personal research website of **Zhenfang Zhu (朱振方)**, a graduate of the University of Science and Technology of China and a co-founder of Redding AI. It explores AI agents, human agency, and how people and AI grow together over time.
+I am **Zhenfang Zhu (朱振方)**, a graduate of the University of Science and Technology of China and a co-founder of Redding AI. Anthesis is my personal research website. I study AI agents, human agency, and how people and AI grow together over time.
 
-The site contains research notes, literature summaries, and research directions. The current model evaluation page summarizes published work; independent Anthesis evaluations and rankings have not yet been released. This repository contains the website source and page content.
+I share my research notes, literature summaries, and research directions here. On the model evaluation page, I currently summarize published work; I have not yet released independent evaluations or rankings. I maintain the website source and page content in this repository.
 
 [Research notes](https://anthesis.ac.cn/en/notes.html) · [Models and evaluations](https://anthesis.ac.cn/en/models.html) · [About](https://anthesis.ac.cn/en/about.html)
 
@@ -56,8 +56,8 @@ Update the Chinese source pages and translation map before running the generator
 
 ## 反馈与联系 / Feedback and contact
 
-链接失效、页面问题或引用更正可通过 [Issues](https://github.com/zhenfangzhu/anthesis.ac.cn/issues)反馈；请提供页面地址与具体问题。
+如果你发现失效链接、页面问题或需要更正的引用，欢迎通过 [Issues](https://github.com/zhenfangzhu/anthesis.ac.cn/issues)告诉我，并提供页面地址与具体问题。
 
-For broken links, website issues, or reference corrections, please open an issue with the page URL and a description.
+If you find a broken link, a website issue, or a reference that needs correction, please let me know by opening an issue with the page URL and a description.
 
 [个人网站 / Personal website](https://zhuzhenfang.com/) · [GitHub](https://github.com/zhenfangzhu) · [Email](mailto:zhuzhenfang@ustc.edu)
