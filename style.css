@@ -512,3 +512,16 @@ html[lang="en"] .article-deck,html[lang="en"] .article-body blockquote{ text-wra
  html[lang="en"] .site-header .site-nav a{font-size:11px}
  .about-belief{font-size:23px}
 }
+
+.about-page .about-main{max-width:1180px}
+.about-layout{display:grid;grid-template-columns:minmax(240px,350px) minmax(0,1fr);gap:clamp(40px,6vw,88px);align-items:start}
+.about-portrait{display:block;width:100%;height:auto;border-radius:3px}
+.about-text{padding-top:2px}
+.about-text .about-belief{margin-top:42px;font-size:clamp(23px,2.1vw,30px)}
+@media(max-width:700px){
+ .about-layout{grid-template-columns:1fr;gap:32px}
+ .about-portrait{max-width:320px}
+ .about-text{padding-top:0}
+ .about-text .about-belief{margin-top:36px;font-size:24px}
+}
+.about-page .notes-heading{margin-bottom:32px}
