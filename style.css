@@ -757,8 +757,11 @@ html[lang] .article-page .article-body h2{margin:52px 0 20px;font-size:23px;font
 
 .about-website .about-website-icon{width:22px;height:22px;flex:none}
 
-/* Shared, unobtrusive visitor statistics. */
-.site-footer{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px 24px;padding:24px 20px 32px;color:var(--muted);font-size:12px;line-height:1.8;text-align:center}
-.site-footer a{color:inherit;text-decoration:none}
-.site-footer a:hover{text-decoration:underline}
+/* Keep visitor statistics aligned with the content as quiet footer metadata. */
+.site-footer{display:flex;flex-wrap:wrap;justify-content:flex-end;align-items:center;width:84%;max-width:1240px;margin:0 auto;gap:8px 20px;padding:24px 0 32px;color:var(--muted);font-size:11px;line-height:1.8;text-align:right}
+.site-footer>span{white-space:nowrap}
 .site-footer [id^="busuanzi_value_"]{font-variant-numeric:tabular-nums}
+.about-page .site-footer{width:75%;max-width:1280px}
+.article-page .site-footer{max-width:660px}
+@media(min-width:701px) and (max-width:1000px){.about-page .site-footer{width:84%}}
+@media(max-width:700px){.site-footer,.about-page .site-footer,.article-page .site-footer{width:100%;max-width:536px;justify-content:center;padding:20px 24px 28px;text-align:center}}
