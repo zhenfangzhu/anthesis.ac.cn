@@ -769,3 +769,9 @@ html[lang] .article-page .article-body h2{margin:52px 0 20px;font-size:23px;font
 .article-byline{margin:18px 0 0;color:var(--muted);font-size:12px;line-height:1.8}
 .article-byline a{color:inherit;text-decoration:underline;text-underline-offset:3px}
 .article-byline a:hover{color:var(--blue)}
+
+/* Language versions are ordinary crawlable links, including without JavaScript. */
+.language-switch .language-options a{display:flex;align-items:center;justify-content:flex-end;width:100%;min-height:44px;padding:0 24px 0 0;color:inherit;text-decoration:none;font-size:inherit;line-height:1.6}
+.language-switch .language-options a:hover{color:var(--blue)}
+.language-switch .language-options a[aria-current="true"]{display:none}
+@media(max-width:700px){.language-switch .language-options a{min-height:48px;padding-right:15px}}
