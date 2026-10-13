@@ -40,7 +40,12 @@ class EnglishPage(HTMLParser):
         for key, value in list(attrs.items()):
             if value is None: continue
             if key in ('aria-label', 'title', 'alt', 'content'): attrs[key] = translate(value)
-            if key in ('href', 'src', 'srcset') and re.match(r'(?:\./)?(?:assets/|style\.css|language\.js)', value):
+            if key == 'srcset':
+                attrs[key] = ', '.join(
+                    re.sub(r'^(?:\./)?assets/', '../assets/', candidate.strip())
+                    for candidate in value.split(',')
+                )
+            elif key in ('href', 'src') and re.match(r'(?:\./)?(?:assets/|style\.css|language\.js)', value):
                 attrs[key] = '../' + value.removeprefix('./')
         if tag == 'link' and attrs.get('rel') == 'canonical': attrs['href'] = url(self.name, True)
         if tag == 'meta' and attrs.get('property') == 'og:url': attrs['content'] = url(self.name, True)
