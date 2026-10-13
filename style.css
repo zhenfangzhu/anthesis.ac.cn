@@ -754,3 +754,5 @@ html[lang] .article-page .article-body h2{margin:52px 0 20px;font-size:23px;font
 
 /* Load the compact emblem directly instead of a large background sprite. */
 .site-header .brand-bloom{background:none;object-fit:contain;object-position:center;flex-shrink:0}
+
+.about-website .about-website-icon{width:22px;height:22px;flex:none}
