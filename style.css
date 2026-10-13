@@ -382,17 +382,22 @@ html[lang="en"] .eval-section-head>span{line-height:1.7;text-align:right}
  .site-header .brand-bloom{width:30px}
 }
 
-/* Language choice as a discreet dropdown. */
+/* Language choices unfold below the label without a floating panel. */
 .language-switch{display:block;height:auto;font-size:12px;z-index:30}
 .language-switch summary{list-style:none;display:flex;align-items:center;justify-content:flex-end;gap:10px;min-height:46px;min-width:70px;cursor:pointer;color:var(--muted)}
 .language-switch summary::-webkit-details-marker{display:none}
 .language-switch summary svg{width:14px;height:14px;flex:none}
 .language-switch summary:focus-visible{outline:1px solid var(--blue);outline-offset:4px}
-.language-options{position:absolute;right:0;top:52px;width:128px;background:#faf9f5;border:1px solid #deded4;padding:7px;box-shadow:0 12px 32px #3031290a}
+.language-options{position:absolute;right:0;top:100%;width:max-content;min-width:100%;background:var(--paper);border:0;padding:2px 0 6px;box-shadow:none;transform-origin:top}
+.language-switch[open] .language-options{animation:language-drawer-open .18s ease-out}
+.language-switch summary svg{transition:transform .18s ease}
+.language-switch[open] summary svg{transform:rotate(180deg)}
+@keyframes language-drawer-open{from{opacity:0;clip-path:inset(0 0 100% 0);transform:translateY(-5px)}to{opacity:1;clip-path:inset(0);transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.language-switch[open] .language-options{animation:none}.language-switch summary svg{transition:none}}
 .language-switch:not([open]) .language-options{display:none}
-.language-switch .language-options button{display:block;width:100%;text-align:left;padding:0 12px;min-height:44px;font-size:12px}
-.language-options button:hover{background:var(--paper)}
-@media(max-width:700px){.language-switch summary{min-height:44px;gap:7px}.language-options{top:50px}}
+.language-switch .language-options button{display:block;width:100%;text-align:right;padding:0 24px 0 0;min-height:44px;font-size:inherit;line-height:1.6}
+.language-options button:hover{color:var(--blue)}
+@media(max-width:700px){.language-switch summary{min-height:44px;gap:7px}.language-switch .language-options button{padding-right:15px}}
 
 /* English home: retain the composition, give the longer question room. */
 html[lang="en"] .home-page .english-question{display:none}
@@ -493,35 +498,256 @@ html[lang="en"] .article-deck,html[lang="en"] .article-body blockquote{ text-wra
  html[lang="en"] .site-header .language-current::after{font-size:12px}
 }
 
-/* A quiet author page, aligned with the research pages. */
-.about-page .about-main{padding-top:48px}
-.about-copy{max-width:650px;font-size:18px;line-height:1.95}
-.about-copy p{margin:0 0 24px;text-wrap:pretty}
-.about-belief{max-width:820px;margin-top:64px;color:var(--blue,#002fa7);font-size:clamp(24px,2.5vw,34px);font-weight:600;line-height:1.65}
-.about-belief p{margin:0 0 12px;text-wrap:balance}
+/* About: portrait and biography share one aligned profile block. */
+.about-page .about-main{max-width:1180px;padding-top:72px}
+.about-layout{display:grid;grid-template-columns:250px minmax(0,1fr);gap:68px;align-items:start}
+.about-portrait{display:block;width:100%;height:330px;object-fit:cover;object-position:55% 45%;border-radius:2px}
+.about-profile h1{margin:0 0 16px;font-size:40px;font-weight:500;line-height:1.2;letter-spacing:-.6px}
+.about-profile p{margin:0;text-wrap:pretty}
+.about-role{font-size:21px;line-height:1.6}
+.about-education{font-size:17px;line-height:1.9;color:var(--muted);margin-top:10px!important}
+.about-purpose{font-size:18px;line-height:1.9;margin-top:30px!important;max-width:600px}
+.about-belief{margin-top:34px;color:var(--blue);font-size:25px;font-weight:600;line-height:1.6}
+.about-belief p+p{margin-top:12px;font-size:19px;font-weight:400;line-height:1.85}
+@media(min-width:701px) and (max-width:1000px){
+ .about-layout{grid-template-columns:210px minmax(0,1fr);gap:40px}
+ .about-portrait{height:290px}
+ .about-profile h1{font-size:34px}
+}
 @media(max-width:700px){
- .about-page .about-main{padding-top:36px}
- .about-copy{font-size:16px;line-height:1.9}
- .about-belief{margin-top:44px;font-size:25px;line-height:1.65}
  .site-header .nav-full{display:none}
  .site-header .nav-compact{display:inline}
+ .about-page .about-main{padding-top:32px}
+ .about-layout{grid-template-columns:1fr;gap:28px}
+ .about-portrait{width:152px;height:190px}
+ .about-profile h1{font-size:30px;margin-bottom:10px}
+ .about-role{font-size:18px}
+ .about-education{font-size:15px;margin-top:6px!important}
+ .about-purpose{font-size:16px;margin-top:24px!important;line-height:1.85}
+ .about-belief{margin-top:28px;font-size:24px}
+ .about-belief p+p{font-size:18px;line-height:1.8}
 }
 @media(max-width:360px){
  .site-header .wordmark{font-size:17px}
  .site-header .site-nav,html[lang="en"] .site-header .site-nav{gap:5px}
  html[lang="en"] .site-header .site-nav a{font-size:11px}
+ .about-portrait{width:136px;height:170px}
  .about-belief{font-size:23px}
 }
 
-.about-page .about-main{max-width:1180px}
-.about-layout{display:grid;grid-template-columns:minmax(240px,350px) minmax(0,1fr);gap:clamp(40px,6vw,88px);align-items:start}
-.about-portrait{display:block;width:100%;height:auto;border-radius:3px}
-.about-text{padding-top:2px}
-.about-text .about-belief{margin-top:42px;font-size:clamp(23px,2.1vw,30px)}
+/* Biography uses an even, unaccented reading rhythm. */
+.about-profile .about-biography{margin-top:24px;font-size:17px;line-height:1.95;font-weight:400;color:var(--ink)}
+.about-profile .about-biography p+p{margin-top:18px}
 @media(max-width:700px){
- .about-layout{grid-template-columns:1fr;gap:32px}
- .about-portrait{max-width:320px}
- .about-text{padding-top:0}
- .about-text .about-belief{margin-top:36px;font-size:24px}
+ .about-profile .about-biography{margin-top:22px;font-size:16px;line-height:1.9}
+ .about-profile .about-biography p+p{margin-top:20px}
 }
-.about-page .notes-heading{margin-bottom:32px}
+
+.about-personal-link{display:inline-flex;align-items:center;gap:9px;min-height:44px;margin-top:24px;color:var(--muted);font-size:14px;text-decoration:none}
+.about-personal-link svg{width:14px;height:14px;flex:none}
+.about-personal-link:hover{color:var(--ink)}
+.about-personal-link:hover span{text-decoration:underline;text-underline-offset:4px}
+
+/* Match the portrait to the full height of the biography on desktop. */
+@media(min-width:701px){
+ .about-layout{grid-template-columns:320px minmax(0,1fr);gap:120px;align-items:stretch}
+ .about-portrait-frame{position:relative;min-height:360px}
+ .about-portrait-frame .about-portrait{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:55% center}
+}
+@media(min-width:701px) and (max-width:1000px){
+ .about-layout{grid-template-columns:250px minmax(0,1fr);gap:64px}
+}
+
+/* More separation between the mobile question and the name definition. */
+@media(max-width:700px){
+ .home-page .name{margin-top:clamp(128px,18svh,160px)}
+}
+
+/* Language label matches mobile navigation typography, with muted color. */
+@media(max-width:700px){
+ .site-header{--mobile-nav-size:13px}
+ .site-header .site-nav a,html[lang="en"] .site-header .site-nav a,
+ .site-header .language-switch summary{font-size:var(--mobile-nav-size);font-weight:400;line-height:1.6;letter-spacing:0;min-height:44px;display:flex;align-items:center}
+ .site-header .language-current{font-size:inherit;line-height:inherit;letter-spacing:inherit}
+ .site-header .language-switch summary{color:var(--muted)}
+ html[lang="en"] .site-header .language-current{font-size:0}
+ html[lang="en"] .site-header .language-current::after{font-size:var(--mobile-nav-size);line-height:1.6}
+}
+@media(max-width:360px){
+ .site-header{--mobile-nav-size:12px}
+ html[lang="en"] .site-header{--mobile-nav-size:11px}
+}
+
+/* Mobile profile follows a full-width portrait with the biography below. */
+@media(max-width:700px){
+ .about-page .about-layout{gap:28px}
+ .about-page .about-portrait-frame{width:100%;min-width:0}
+ .about-page .about-portrait-frame .about-portrait{position:static;display:block;width:100%;height:auto;aspect-ratio:2 / 3;object-fit:cover;object-position:55% center;border-radius:2px}
+}
+
+@media(max-width:700px){
+ .site-header .site-nav{justify-content:flex-start;margin-left:8px}
+ .site-header .site-nav a:last-child .nav-compact{white-space:nowrap}
+}
+@media(max-width:360px){
+ .site-header .site-nav{margin-left:0}
+}
+
+/* Name and email share the opening line, with the role directly below. */
+.about-heading-row{display:flex;align-items:center;gap:18px;margin-bottom:16px}
+.about-profile .about-heading-row h1{margin:0}
+.about-email{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;flex:none;color:var(--ink)}
+.about-email svg{display:block;width:30px;height:30px}
+.about-email:hover{color:var(--blue)}
+.about-profile .about-role{font-weight:500}
+@media(max-width:700px){
+ .about-heading-row{gap:12px;margin-bottom:10px}
+ .about-email svg{width:27px;height:27px}
+}
+
+/* Keep mobile navigation grouped beside the language control. */
+@media(max-width:700px){
+ .site-header .site-nav{justify-content:flex-end;align-items:center;margin-left:0}
+}
+
+/* Profile typography scales to the shorter biography and available reading width. */
+.about-page{--ink:#111;background:var(--paper);color:var(--ink)}
+.about-page .about-main{width:75%;max-width:1280px;padding:72px 0 90px}
+.about-page .about-layout{grid-template-columns:minmax(0,1fr) minmax(0,2.74fr);gap:8%;align-items:start}
+.about-page .about-portrait-frame{position:static;min-height:0}
+.about-page .about-portrait-frame .about-portrait{position:static;width:100%;height:auto;aspect-ratio:2 / 3;object-fit:cover;object-position:55% center;border-radius:0}
+.about-page .about-heading-row{gap:12px;margin:3px 0 15px}
+.about-page .about-heading-row h1{font-size:38px;line-height:1.2;font-weight:600;letter-spacing:0}
+.about-page .about-email{width:32px;height:40px}
+.about-page .about-email svg{width:26px;height:26px}
+.about-page .about-role{font-size:24px;line-height:1.5;font-weight:500;text-wrap:initial}
+.about-page .about-biography{margin-top:26px;font-size:20px;line-height:1.8;letter-spacing:0;text-align:left}
+.about-page .about-biography p{text-wrap:pretty}
+.about-page .about-biography p+p{margin-top:26px}
+@media(min-width:1600px){
+ .about-page .about-main{padding-top:85px}
+ .about-page .about-heading-row h1{font-size:40px}
+ .about-page .about-role{font-size:25px}
+ .about-page .about-biography{font-size:22px}
+}
+@media(min-width:701px) and (max-width:1000px){
+ .about-page .about-main{width:84%;padding-top:56px}
+ .about-page .about-layout{gap:6%;grid-template-columns:minmax(0,1fr) minmax(0,2.3fr)}
+ .about-page .about-heading-row h1{font-size:30px}
+ .about-page .about-role{font-size:20px}
+}
+@media(max-width:700px){
+ .about-page .about-main{width:100%;max-width:536px;padding:32px 24px 56px}
+ .about-page .about-layout{grid-template-columns:1fr;gap:28px}
+ .about-page .about-heading-row{margin-top:0;margin-bottom:12px}
+ .about-page .about-heading-row h1{font-size:30px}
+ .about-page .about-role{font-size:20px}
+ .about-page .about-biography{font-size:18px;line-height:1.8;margin-top:24px}
+ .about-page .about-biography p+p{margin-top:26px}
+}
+
+/* Full email address sits below the profile role. */
+.about-page .about-email{width:fit-content;max-width:100%;height:auto;min-height:44px;gap:10px;margin-top:10px;color:var(--muted);font-size:16px;line-height:1.5;text-decoration:none}
+.about-page .about-email svg{width:22px;height:22px;flex:none}
+.about-page .about-email span{overflow-wrap:anywhere}
+.about-page .about-email:hover{color:var(--blue)}
+.about-page .about-email:hover span{text-decoration:underline;text-underline-offset:4px}
+@media(max-width:700px){.about-page .about-email{font-size:15px;margin-top:8px}}
+
+/* Shared Klein-blue emphasis across home, research notes, and evaluations. */
+:root{--emphasis-size:clamp(34px,3.7vw,54px);--emphasis-leading:1.4;--emphasis-tracking:-1.5px}
+html[lang] :is(.home-page,.article-page,.evaluation-page) .brand-emphasis{
+ font-family:Arial,"PingFang SC","Microsoft YaHei",sans-serif;
+ font-size:var(--emphasis-size);font-weight:700;line-height:var(--emphasis-leading);
+ letter-spacing:var(--emphasis-tracking);color:var(--blue);white-space:normal;overflow-wrap:break-word;text-wrap:pretty;
+}
+@media(min-width:701px) and (max-width:1000px){
+ :root{--emphasis-size:clamp(29px,3.6vw,38px);--emphasis-tracking:-1px}
+}
+@media(max-width:700px){
+ :root{--emphasis-size:clamp(28px,8.8vw,42px);--emphasis-leading:1.46;--emphasis-tracking:-1.1px}
+}
+
+/* Long-form notes use a quieter scale than landing-page headlines. */
+.article-page{--emphasis-size:25px;--emphasis-leading:1.7;--emphasis-tracking:0}
+.article-page .article-main{max-width:660px;padding-top:48px;padding-bottom:80px}
+.article-page .article-meta{margin:30px 0 16px;font-size:11px;letter-spacing:.5px}
+html[lang] .article-page .article-header h1{font-size:38px;font-weight:500;line-height:1.35;letter-spacing:-.6px;text-wrap:balance}
+.article-page .article-deck{margin-top:28px}
+html[lang] .article-page .article-body{margin-top:42px;font-size:17px;line-height:1.95;letter-spacing:0}
+.article-page .article-body>p{margin:0 0 24px;text-wrap:pretty}
+html[lang] .article-page .article-body h2{margin:52px 0 20px;font-size:23px;font-weight:600;line-height:1.5;letter-spacing:0;text-wrap:pretty}
+.article-page .article-body blockquote{margin:32px 0 34px;padding:0}
+.article-page .article-divider{margin:44px 0 0}
+.article-page .article-divider+h2{margin-top:36px}
+.article-page .article-footer{margin-top:48px;padding-top:24px}
+@media(max-width:700px){
+ .article-page{--emphasis-size:22px;--emphasis-leading:1.65}
+ .article-page .article-main{max-width:536px;padding:32px 24px 56px}
+ .article-page .article-meta{margin:24px 0 14px;font-size:10px}
+ html[lang] .article-page .article-header h1{font-size:30px;line-height:1.4;letter-spacing:-.4px}
+ .article-page .article-deck{margin-top:22px}
+ html[lang] .article-page .article-body{font-size:16px;line-height:1.9;margin-top:34px}
+ .article-page .article-body>p{margin-bottom:22px}
+ html[lang] .article-page .article-body h2{font-size:21px;line-height:1.55;margin-top:40px;margin-bottom:18px}
+ .article-page .article-body blockquote{margin:28px 0}
+ .article-page .article-divider{margin-top:34px}
+ .article-page .article-divider+h2{margin-top:30px}
+ .article-page .article-footer{margin-top:38px}
+}
+
+/* The language drawer offers only the alternative language. */
+.language-switch .language-options button[aria-pressed="true"]{display:none}
+
+/* Mobile reading rhythm: readable supporting copy and consistent gutters. */
+@media(max-width:700px){
+ .site-header{padding-inline:24px;gap:8px}
+ .site-header .site-nav,html[lang="en"] .site-header .site-nav{gap:10px}
+ .site-header .site-nav a,html[lang="en"] .site-header .site-nav a{min-height:44px}
+ .language-switch .language-options button{min-height:48px}
+ .home-page .name-intent,html[lang="en"] .home-page .name-intent{font-size:15px;line-height:1.9;max-width:350px}
+ .home-page .pronunciation{font-size:12px;line-height:1.6;margin-bottom:22px}
+ .home-page .meaning{font-size:18px;line-height:1.7;margin-bottom:14px}
+ .home-page .dictionary-link{font-size:12px;margin-top:18px;min-height:44px}
+ .notes-index .notes-main,.evaluation-page .notes-main{padding-top:40px}
+ .notes-index .notes-editorial-list{margin-top:28px}
+ .notes-editorial-entry{gap:12px;padding:26px 0}
+ .notes-editorial-entry h2{font-size:21px;line-height:1.5;margin-bottom:12px}
+ .notes-editorial-entry p{font-size:15px;line-height:1.85}
+ .evaluation-page .eval-lead,.evaluation-page .eval-copy,
+ .evaluation-page .eval-editorial p,.evaluation-page .eval-method p{font-size:15px;line-height:1.9}
+ .evaluation-page .eval-lead{margin-top:24px}
+ .evaluation-page .compact-evidence{margin-top:40px;padding-top:26px}
+ .evaluation-page .eval-section-head{margin-bottom:22px}
+ .evaluation-page .eval-section-head h2{font-size:22px;line-height:1.55;text-wrap:pretty}
+ .evaluation-page .learning-stats>div>span{font-size:13px;line-height:1.7}
+ .evaluation-page .learning-stats small{font-size:12px;line-height:1.75}
+ .evaluation-page .evidence-limit,.evaluation-page .compact-footnote{font-size:13px;line-height:1.85}
+ .evaluation-page .compact-source{font-size:13px;line-height:1.8}
+ .evaluation-page .references li{font-size:14px;line-height:1.85}
+ .evaluation-page .references li>span{font-size:12px;line-height:1.8}
+ .article-page .article-back{font-size:13px}
+ .article-page .article-meta{font-size:11px}
+ .article-page .article-footer p{font-size:12px;line-height:1.85}
+ .about-page .about-layout{gap:30px}
+ .about-page .about-biography{font-size:17px;line-height:1.9}
+ .about-page .about-biography p+p{margin-top:24px}
+ .about-page .about-email{font-size:16px;margin-top:20px;min-height:48px}
+}
+@media(max-width:380px){
+ .site-header{padding-inline:18px;gap:6px;flex-wrap:wrap}
+ .site-header .wordmark{font-size:19px}
+ .site-header .site-nav,html[lang="en"] .site-header .site-nav{order:3;flex-basis:100%;justify-content:space-between;gap:14px;margin-top:4px}
+ .site-header .site-nav a,html[lang="en"] .site-header .site-nav a{font-size:13px;padding:0 4px}
+ .site-header .language-switch{margin-left:auto}
+ .home-page main{padding-top:42px}
+ .about-page .about-role{font-size:18px}
+ .about-page .about-biography{font-size:16px}
+}
+
+/* Contact links share one row and wrap naturally on narrow screens. */
+.about-contact-links{display:flex;align-items:center;flex-wrap:wrap;gap:4px 26px;margin-top:20px}
+.about-page .about-contact-links .about-email{margin-top:0}
+.about-website{display:inline-flex;align-items:center;gap:8px;min-height:48px;color:var(--muted);font-size:16px;line-height:1.5;text-decoration:none}
+.about-website svg{width:14px;height:14px;flex:none}
+.about-website:hover{color:var(--blue);text-decoration:underline;text-underline-offset:4px}
