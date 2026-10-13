@@ -492,3 +492,23 @@ html[lang="en"] .article-deck,html[lang="en"] .article-body blockquote{ text-wra
  .site-header .language-switch{font-size:12px}
  html[lang="en"] .site-header .language-current::after{font-size:12px}
 }
+
+/* A quiet author page, aligned with the research pages. */
+.about-page .about-main{padding-top:48px}
+.about-copy{max-width:650px;font-size:18px;line-height:1.95}
+.about-copy p{margin:0 0 24px;text-wrap:pretty}
+.about-belief{max-width:820px;margin-top:64px;color:var(--blue,#002fa7);font-size:clamp(24px,2.5vw,34px);font-weight:600;line-height:1.65}
+.about-belief p{margin:0 0 12px;text-wrap:balance}
+@media(max-width:700px){
+ .about-page .about-main{padding-top:36px}
+ .about-copy{font-size:16px;line-height:1.9}
+ .about-belief{margin-top:44px;font-size:25px;line-height:1.65}
+ .site-header .nav-full{display:none}
+ .site-header .nav-compact{display:inline}
+}
+@media(max-width:360px){
+ .site-header .wordmark{font-size:17px}
+ .site-header .site-nav,html[lang="en"] .site-header .site-nav{gap:5px}
+ html[lang="en"] .site-header .site-nav a{font-size:11px}
+ .about-belief{font-size:23px}
+}
