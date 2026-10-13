@@ -2,6 +2,13 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
+<script>
+// Keep old public links on the canonical HTTPS site; leave local previews alone.
+if ((location.hostname === 'anthesis.ac.cn' || location.hostname === 'www.anthesis.ac.cn') &&
+    (location.protocol !== 'https:' || location.hostname !== 'anthesis.ac.cn')) {
+  location.replace('https://anthesis.ac.cn' + location.pathname + location.search + location.hash);
+}
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="当我们与人工智能共同成长，我们会成为什么？关于 Anthesis 的名字与研究初衷。">
 <meta name="theme-color" content="#f4f3ed">
