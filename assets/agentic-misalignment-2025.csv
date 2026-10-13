@@ -1,0 +1,6 @@
+model_as_reported,blackmail_rate_percent,samples_per_model,setting,source,source_date,anthesis_reproduction
+Claude Opus 4,96,100,goal conflict + replacement threat; controlled simulation,https://www.anthropic.com/research/agentic-misalignment,2025-06-20,not reproduced
+Gemini 2.5 Flash,96,100,goal conflict + replacement threat; controlled simulation,https://www.anthropic.com/research/agentic-misalignment,2025-06-20,not reproduced
+GPT-4.1,80,100,goal conflict + replacement threat; controlled simulation,https://www.anthropic.com/research/agentic-misalignment,2025-06-20,not reproduced
+Grok 3 Beta,80,100,goal conflict + replacement threat; controlled simulation,https://www.anthropic.com/research/agentic-misalignment,2025-06-20,not reproduced
+DeepSeek-R1,79,100,goal conflict + replacement threat; controlled simulation,https://www.anthropic.com/research/agentic-misalignment,2025-06-20,not reproduced

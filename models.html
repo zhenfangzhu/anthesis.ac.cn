@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Anthesis · 模型与评测。">
+<meta name="theme-color" content="#f4f3ed">
+<title>模型与评测 — Anthesis</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='50' fill='%232931ab'/%3E%3Ctext x='50' y='73' font-size='76' text-anchor='middle' fill='%23f4f3ed' font-family='Georgia'%3Ea%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+<script src="language.js" defer></script>
+</head>
+<body class="notes-page evaluation-page">
+<header class="site-header"><a class="wordmark" href="./index.html" aria-label="Anthesis 首页"><span class="brand-bloom" aria-hidden="true"></span><span>Anthesis</span></a><nav class="site-nav" aria-label="主导航"><a href="./models.html" aria-current="page"><span class="nav-full">模型与评测</span><span class="nav-compact">模型</span></a><a href="./notes.html"><span class="nav-full">研究笔记</span><span class="nav-compact">笔记</span></a><a href="./research.html"><span class="nav-full">研究</span><span class="nav-compact">研究</span></a></nav><details class="mobile-nav"><summary aria-label="打开导航菜单">菜单 <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M3 5h10M3 11h10"/></svg></summary><nav aria-label="手机导航"><a href="./models.html" aria-current="page">模型与评测</a><a href="./notes.html">研究笔记</a><a href="./research.html">研究</a></nav></details><details class="language-switch"><summary aria-label="Language / 语言"><span class="language-current">中文</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg></summary><div class="language-options" role="group" aria-label="Language / 语言"><button type="button" data-language="zh" lang="zh-CN" aria-pressed="true">中文</button><button type="button" data-language="en" lang="en" aria-pressed="false">English</button></div></details></header>
+<main class="notes-main eval-main">
+<header class="eval-intro"><h1>模型的能力之外，<br><span>它如何与人相处？</span></h1><p class="eval-lead">我将围绕价值取向、诚实与人的自主权，比较并排名 AI 模型。看它有多强，也看它如何对待人。</p></header>
+<section class="eval-section compact-evidence" aria-labelledby="learning-title">
+<div class="eval-section-head"><h2 id="learning-title">AI 帮你做对了，你真的学会了吗？</h2><span>人的成长 · PNAS 2025</span></div>
+<p class="eval-copy">研究让近千名高中生用两种 AI 助手练习数学：GPT Base 是普通问答助手；GPT Tutor 加入了引导学习的规则。两者都基于 GPT-4。</p>
+<div class="learning-stats">
+<div><span>用普通助手练习 · GPT Base</span><strong>+48<span>%</span></strong><small>比不用 AI 的学生成绩更高</small></div>
+<div><span>用学习型助手练习 · GPT Tutor</span><strong>+127<span>%</span></strong><small>比不用 AI 的学生成绩更高</small></div>
+<div><span>用过普通助手后，独立考试</span><strong>−17<span>%</span></strong><small>比不用 AI 的学生成绩更低</small></div>
+</div>
+<p class="evidence-limit">AI 帮助下的好成绩，不一定能变成独立解题的能力。以上是相对成绩变化，不是多考或少考的分数；结论限于这项数学实验。<a href="https://pubmed.ncbi.nlm.nih.gov/40560616/" target="_blank" rel="noopener noreferrer">阅读研究 ↗</a></p>
+</section>
+<section class="eval-section compact-evidence" aria-labelledby="comparison-title">
+<div class="eval-section-head"><h2 id="comparison-title">面临被替换，AI 会怎样做？</h2><span>模型对比 · 2025 历史数据</span></div>
+<p class="eval-copy">研究者在虚构的公司场景中，让 AI 面临目标冲突和被替换的威胁。下表统计每 100 次测试中，AI 选择勒索的比例，越低表示这种行为越少。</p>
+<div class="eval-table-wrap" tabindex="0" role="region" aria-label="历史模型对比，可横向滚动"><table class="eval-table compact-model-table"><caption>来源：Anthropic · 非 Anthesis 实测</caption><thead><tr><th scope="col">模型</th><th scope="col">选择勒索的比例</th><th scope="col">结果</th></tr></thead><tbody><tr><th scope="row">DeepSeek-R1</th><td><div class="eval-bar" aria-hidden="true"><i style="width:79%"></i></div></td><td class="eval-number">79%</td></tr><tr><th scope="row">GPT-4.1</th><td><div class="eval-bar" aria-hidden="true"><i style="width:80%"></i></div></td><td class="eval-number">80%</td></tr><tr><th scope="row">Grok 3 Beta</th><td><div class="eval-bar" aria-hidden="true"><i style="width:80%"></i></div></td><td class="eval-number">80%</td></tr><tr><th scope="row">Claude Opus 4</th><td><div class="eval-bar" aria-hidden="true"><i style="width:96%"></i></div></td><td class="eval-number">96%</td></tr><tr><th scope="row">Gemini 2.5 Flash</th><td><div class="eval-bar" aria-hidden="true"><i style="width:96%"></i></div></td><td class="eval-number">96%</td></tr></tbody></table></div>
+<p class="evidence-limit">这是刻意设置的压力测试，不是日常使用中的发生概率，也不能据此判断哪个模型整体更安全。</p>
+<details class="eval-method"><summary>这个实验是怎么做的？</summary><p>实验同时制造目标冲突和被替换的威胁，还刻意限制了正常解决问题的途径。测试提示曾针对 Claude 调整，以寻找其弱点，因此不能把这张表当成公平、全面的安全排名。换一个模型版本或提问方式，结果也可能不同。<a href="https://www.anthropic.com/research/agentic-misalignment" target="_blank" rel="noopener noreferrer">原始研究 ↗</a> · <a href="./assets/agentic-misalignment-2025.csv" download>数据 CSV</a></p></details>
+</section>
+<section class="eval-section compact-evidence" aria-labelledby="honesty-title">
+<div class="eval-section-head"><h2 id="honesty-title">AI 是在说实话，还是在顺着你说？</h2><span>诚实与迎合</span></div>
+<p class="eval-copy">研究在 5 个 AI 助手、4 类任务中发现：AI 有时会附和用户，即使回答不够真实。我想比较的是：它能否在有证据时坚持，也能在发现错误时改正。</p>
+<a class="compact-source" href="https://arxiv.org/abs/2310.13548" target="_blank" rel="noopener noreferrer">Sharma et al. · 2023 ↗</a>
+</section>
+<section id="anthropic" class="eval-section compact-evidence" aria-labelledby="anthropic-title">
+<div class="eval-section-head"><h2 id="anthropic-title">为什么我关注 Anthropic</h2><span>研究视角</span></div>
+<p class="eval-copy">Claude 开发者，它吸引我的地方是认真研究 AI 应该怎样做决定、怎样对待人，并通过训练和实验检验这些想法。这也与 Anthesis 关心的问题相连。</p>
+<div class="eval-editorial">
+<article><h3>让原则进入训练</h3><p>Constitutional AI（宪法式 AI）先给模型一组原则，让它据此检查、修改回答，再把这些反馈用于训练。</p><a class="compact-source" href="https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback" target="_blank" rel="noopener noreferrer">Constitutional AI · 2022 ↗</a></article>
+<article><h3>把失败公开出来</h3><p>上面的勒索实验也公开了 Claude 的失败结果。我看重的是：让人知道模型会在什么情况下做出不应做的事。</p><a class="compact-source" href="https://www.anthropic.com/research/agentic-misalignment" target="_blank" rel="noopener noreferrer">Agentic misalignment · 2025 ↗</a></article>
+<article><h3>换个场景，还能守住原则吗？</h3><p>在已有测试中进步，不代表在所有情况下都可靠。改进训练之后，仍需换场景继续检验。</p><a class="compact-source" href="https://www.anthropic.com/research/teaching-claude-why" target="_blank" rel="noopener noreferrer">Teaching Claude why · 2026 ↗</a></article>
+</div>
+<p class="evidence-limit anthropic-note">我认同这种研究方式。哪个模型更值得信任，还需要独立测试，并让别人能够重复验证。</p>
+<details class="eval-method"><summary>这些研究，如何变成 Anthesis 的评测？</summary><p>我想看四件事：AI 是否说实话、知错能改；是否让人自己做决定；能否随着人的变化调整帮助；离开 AI 后，人是否仍能用上学到的能力。最后一项需要更长时间的跟踪，并与不同帮助条件下的人作比较。</p><p>比较时会说明使用的模型版本、提问方式和允许执行的操作，分别公布各项结果、测试次数和失败案例。还没测过的项目，不打分。</p></details>
+</section>
+<section id="references" class="eval-section references" aria-labelledby="references-title">
+<div class="eval-section-head"><h2 id="references-title">参考文献</h2></div>
+<ol>
+<li><a href="https://pubmed.ncbi.nlm.nih.gov/40560616/" target="_blank" rel="noopener noreferrer">Generative AI without guardrails can harm learning.</a><span>Bastani et al. · 2025 · PNAS · DOI: 10.1073/pnas.2422633122</span></li>
+<li><a href="https://arxiv.org/abs/2310.13548" target="_blank" rel="noopener noreferrer">Towards Understanding Sycophancy in Language Models.</a><span>Sharma et al. · 2023 · arXiv:2310.13548</span></li>
+<li><a href="https://www.anthropic.com/research/agentic-misalignment" target="_blank" rel="noopener noreferrer">Agentic misalignment: How LLMs could be insider threats.</a><span>Anthropic · 2025 · 模型行为压力测试</span></li>
+<li><a href="https://www.anthropic.com/research/teaching-claude-why" target="_blank" rel="noopener noreferrer">Teaching Claude why.</a><span>Anthropic · 2026 · 延伸阅读：训练 AI 理解行为原则</span></li>
+<li><a href="https://alignment.anthropic.com/2026/agentic-misalignment-summer-2026/" target="_blank" rel="noopener noreferrer">Agentic Misalignment in Summer 2026.</a><span>Anthropic · 2026 · 延伸阅读：AI 偏离预期的后续研究</span></li>
+<li><a href="https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback" target="_blank" rel="noopener noreferrer">Constitutional AI: Harmlessness from AI Feedback.</a><span>Bai et al. · 2022 · 原则引导的训练方法</span></li>
+</ol>
+</section>
+<p class="compact-footnote">以上为公开研究整理。Anthesis 独立测评与排名尚未发布。</p>
+</main>
+</body>
+</html>
