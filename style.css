@@ -756,3 +756,9 @@ html[lang] .article-page .article-body h2{margin:52px 0 20px;font-size:23px;font
 .site-header .brand-bloom{background:none;object-fit:contain;object-position:center;flex-shrink:0}
 
 .about-website .about-website-icon{width:22px;height:22px;flex:none}
+
+/* Shared, unobtrusive visitor statistics. */
+.site-footer{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px 24px;padding:24px 20px 32px;color:var(--muted);font-size:12px;line-height:1.8;text-align:center}
+.site-footer a{color:inherit;text-decoration:none}
+.site-footer a:hover{text-decoration:underline}
+.site-footer [id^="busuanzi_value_"]{font-variant-numeric:tabular-nums}
