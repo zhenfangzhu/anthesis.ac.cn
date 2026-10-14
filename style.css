@@ -13,6 +13,7 @@ main{width:84%;max-width:1240px;margin:0 auto;display:grid;grid-template-columns
 .pronunciation{font-family:var(--serif);font-size:12px;letter-spacing:.4px;color:var(--muted);margin:0 0 26px}
 .meaning{font-family:var(--song);font-size:19px;letter-spacing:2px;line-height:1.5;margin:0 0 14px}
 .name-intent{font-size:13px;line-height:2;letter-spacing:.1px;margin:0;color:var(--muted);text-wrap:pretty}
+.home-page .home-intro{margin-top:16px}
 .dictionary-link{display:inline-flex;align-items:center;gap:14px;color:var(--muted);font-size:10px;letter-spacing:.8px;text-decoration:none;padding:8px 0;margin-top:17px;text-underline-offset:5px}
 .dictionary-arrow{font-size:13px}.dictionary-link:hover{color:var(--blue)}.dictionary-link:hover>span:first-child{text-decoration:underline}
 a:focus-visible{outline:1px solid var(--blue);outline-offset:6px}
@@ -30,7 +31,7 @@ a:focus-visible{outline:1px solid var(--blue);outline-offset:6px}
 .brand-bloom{display:block;width:46px;height:46px;flex:none;background-image:url("assets/magnolia-engraving.png");background-repeat:no-repeat;background-size:92px 46px;background-position:left center}
 @media(max-width:700px){.wordmark{gap:4px}.brand-bloom{width:40px;height:40px;background-size:80px 40px}}
 /* Give the dictionary column more separation on wide screens. */
-@media(min-width:1100px){.name{transform:translateX(clamp(24px,3vw,48px))}}
+@media(min-width:1100px){.home-page .name{transform:translate(clamp(48px,5vw,80px),-24px)}}
 
 .name h2{color:var(--blue)}
 /* Mobile editorial layout: shared edge, deliberate line breaks, readable notes. */
