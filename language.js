@@ -13,24 +13,46 @@
       return;
     }
   }
-  const dropdown = document.querySelector('.language-switch');
-  if (!dropdown) return;
-  document.addEventListener('click', event => {
-    if (!dropdown.contains(event.target)) dropdown.open = false;
-  });
-  document.addEventListener('keydown', event => {
-    if (event.key === 'Escape' && dropdown.open) {
-      dropdown.open = false;
-      dropdown.querySelector('summary').focus();
-    }
-  });
-  dropdown.addEventListener('toggle', () => {
-    if (dropdown.open) {
+  const fallback = document.querySelector('.language-switch');
+  if (!fallback) return;
+  const drawer = document.createElement('div');
+  drawer.className = 'language-switch language-drawer';
+  const toggle = document.createElement('button');
+  toggle.type = 'button';
+  toggle.className = 'language-trigger';
+  toggle.setAttribute('aria-label', 'Language / 语言');
+  toggle.setAttribute('aria-controls', 'language-options');
+  toggle.innerHTML = fallback.querySelector('summary').innerHTML;
+  const options = fallback.querySelector('.language-options');
+  options.id = 'language-options';
+  drawer.append(toggle, options);
+  fallback.replaceWith(drawer);
+
+  function setOpen(open) {
+    drawer.classList.toggle('is-open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    options.inert = !open;
+    options.setAttribute('aria-hidden', String(!open));
+    if (open) {
       const menu = document.querySelector('.mobile-nav');
       if (menu) menu.open = false;
     }
+  }
+  setOpen(false);
+  toggle.addEventListener('click', () => setOpen(!drawer.classList.contains('is-open')));
+  document.addEventListener('click', event => {
+    if (!drawer.contains(event.target)) setOpen(false);
+  });
+  drawer.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+      setOpen(false);
+      toggle.focus();
+    }
+  });
+  options.addEventListener('click', event => {
+    if (event.target.closest('a')) setOpen(false);
   });
   document.querySelector('.mobile-nav')?.addEventListener('toggle', event => {
-    if (event.target.open) dropdown.open = false;
+    if (event.target.open) setOpen(false);
   });
 })();
