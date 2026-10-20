@@ -827,9 +827,12 @@ html.magnolia-open{overflow:hidden}
 @media(max-width:1000px){.site-header:has(.language-drawer){gap:12px}}
 @media(max-width:700px){
  .site-header:has(.language-drawer){gap:8px}
- .site-header:has(.language-drawer.is-open){flex-wrap:wrap}
- .site-header:has(.language-drawer.is-open) .site-nav{order:3;flex-basis:100%;justify-content:space-between;margin:0}
- .site-header:has(.language-drawer.is-open) .language-drawer{margin-left:auto}
+ /* Overlay the choices so opening them never reflows the header or page. */
+ .site-header .language-drawer{position:relative}
+ .site-header .language-drawer .language-options{position:absolute;right:0;top:100%;max-width:none;padding:4px 0;background:var(--paper);transform:translateY(-4px);transition:opacity 180ms ease,transform 220ms ease,visibility 220ms}
+ .site-header .language-drawer.is-open .language-options{transform:translateY(0)}
+ .language-drawer .language-trigger svg{transform:none}
+ .language-drawer.is-open .language-trigger svg{transform:rotate(180deg)}
 }
 @media(prefers-reduced-motion:reduce){.site-header .language-drawer .language-options,.language-drawer .language-trigger svg{transition:none}}
 @media(max-width:380px){
