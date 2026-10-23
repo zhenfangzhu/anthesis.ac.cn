@@ -746,6 +746,13 @@ html[lang] .article-page .article-body h2{margin:52px 0 20px;font-size:23px;font
  .about-page .about-biography{font-size:16px}
 }
 
+/* English labels need a second row before the shared narrow-phone breakpoint. */
+@media(min-width:381px) and (max-width:413px){
+ html[lang="en"] .site-header{flex-wrap:wrap}
+ html[lang="en"] .site-header .site-nav{order:3;flex-basis:100%;justify-content:space-between;gap:14px;margin-top:4px}
+ html[lang="en"] .site-header .language-switch{margin-left:auto}
+}
+
 /* Contact links share one row and wrap naturally on narrow screens. */
 .about-contact-links{display:flex;align-items:center;flex-wrap:wrap;gap:4px 26px;margin-top:20px}
 .about-page .about-contact-links .about-email{margin-top:0}

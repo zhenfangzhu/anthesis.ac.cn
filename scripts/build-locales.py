@@ -9,7 +9,7 @@ import json
 import re
 
 ROOT = Path(__file__).resolve().parent.parent
-PAGES = ['index.html', 'about.html', 'models.html', 'notes.html', 'research.html', 'why-anthesis.html']
+PAGES = ['index.html', 'about.html', 'models.html', 'notes.html', 'why-anthesis.html']
 ORIGIN = 'https://anthesis.ac.cn'
 TRANSLATIONS = json.loads((ROOT / 'assets/translations-en.json').read_text())
 
