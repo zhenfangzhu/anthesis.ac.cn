@@ -746,11 +746,11 @@ html[lang] .article-page .article-body h2{margin:52px 0 20px;font-size:23px;font
  .about-page .about-biography{font-size:16px}
 }
 
-/* English labels need a second row before the shared narrow-phone breakpoint. */
+/* Keep narrow English navigation on one row with slightly tighter spacing. */
 @media(min-width:381px) and (max-width:413px){
- html[lang="en"] .site-header{flex-wrap:wrap}
- html[lang="en"] .site-header .site-nav{order:3;flex-basis:100%;justify-content:space-between;gap:14px;margin-top:4px}
- html[lang="en"] .site-header .language-switch{margin-left:auto}
+ html[lang="en"] .site-header{padding-inline:18px}
+ html[lang="en"] .site-header .site-nav{gap:8px}
+ html[lang="en"] .site-header .site-nav a{font-size:12px}
 }
 
 /* Contact links share one row and wrap naturally on narrow screens. */
